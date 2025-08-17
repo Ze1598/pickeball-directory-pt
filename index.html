@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretório de Campos de Pickleball - Portugal</title>
+    <meta name="description" content="Encontre campos de pickleball em Portugal. Diretório completo com informações, localização e contactos.">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-table-tennis"></i>
+                    Pickleball Portugal
+                </h1>
+                <p class="tagline">Diretório completo de campos de pickleball em Portugal</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Search and Filters Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <div class="search-input-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="Procurar por nome, distrito ou serviços..."
+                            class="search-input"
+                        >
+                        <button id="clearSearch" class="clear-btn" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label for="districtFilter" class="filter-label">Distrito:</label>
+                        <select id="districtFilter" class="filter-select">
+                            <option value="">Todos os distritos</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="courtsFilter" class="filter-label">Campos:</label>
+                        <select id="courtsFilter" class="filter-select">
+                            <option value="">Qualquer número</option>
+                            <option value="1">1 campo</option>
+                            <option value="2">2 campos</option>
+                            <option value="4">4+ campos</option>
+                            <option value="8">8+ campos</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="statusFilter" class="filter-label">Estado:</label>
+                        <select id="statusFilter" class="filter-select">
+                            <option value="">Todos</option>
+                            <option value="open">Aberto agora</option>
+                            <option value="closed">Fechado agora</option>
+                        </select>
+                    </div>
+                    
+                    <button id="resetFilters" class="reset-btn">
+                        <i class="fas fa-redo"></i>
+                        Limpar filtros
+                    </button>
+                </div>
+            </section>
+
+            <!-- View Toggle -->
+            <section class="view-toggle">
+                <div class="toggle-buttons">
+                    <button id="listViewBtn" class="toggle-btn active">
+                        <i class="fas fa-list"></i>
+                        Lista
+                    </button>
+                    <button id="mapViewBtn" class="toggle-btn">
+                        <i class="fas fa-map"></i>
+                        Mapa
+                    </button>
+                </div>
+                <div class="results-count">
+                    <span id="resultsCount">0</span> campos encontrados
+                </div>
+            </section>
+
+            <!-- Content Views -->
+            <section class="content-views">
+                <!-- List View -->
+                <div id="listView" class="view-content active">
+                    <div id="facilitiesList" class="facilities-grid">
+                        <!-- Facilities will be loaded here -->
+                    </div>
+                    
+                    <div id="noResults" class="no-results" style="display: none;">
+                        <i class="fas fa-search"></i>
+                        <h3>Nenhum resultado encontrado</h3>
+                        <p>Tente ajustar os seus critérios de pesquisa ou filtros.</p>
+                    </div>
+                </div>
+                
+                <!-- Map View -->
+                <div id="mapView" class="view-content">
+                    <div id="map" class="map-container"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pickleball Portugal</h3>
+                    <p>O seu diretório completo de campos de pickleball em Portugal.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Informações</h4>
+                    <p>Dados atualizados regularmente</p>
+                    <p>Contacte-nos para adicionar o seu campo</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Seguir</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pickleball Portugal. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Data -->
+    <script src="data.js"></script>
+    
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
