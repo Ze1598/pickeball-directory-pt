@@ -339,7 +339,55 @@ function formatHours(hours) {
         return '24 horas';
     }
     
-    return hours;
+    // Convert AM/PM format to 24-hour format
+    return convertTo24HourFormat(hours);
+}
+
+// Convert AM/PM time format to 24-hour format
+function convertTo24HourFormat(timeString) {
+    if (!timeString || timeString === 'Closed' || timeString === 'Fechado') {
+        return timeString;
+    }
+    
+    // Handle multiple time ranges separated by commas
+    const ranges = timeString.split(',').map(range => range.trim());
+    const convertedRanges = ranges.map(range => {
+        // Split the range by dash
+        const parts = range.split('-');
+        if (parts.length !== 2) return range;
+        
+        const startTime = convertSingleTime(parts[0].trim());
+        const endTime = convertSingleTime(parts[1].trim());
+        
+        return `${startTime}-${endTime}`;
+    });
+    
+    return convertedRanges.join(', ');
+}
+
+// Convert a single time from AM/PM to 24-hour format
+function convertSingleTime(timeStr) {
+    if (!timeStr) return timeStr;
+    
+    // Match time patterns like "9am", "12:30pm", "10:45am"
+    const match = timeStr.match(/(\d+)(?::(\d+))?(am|pm)/i);
+    if (!match) return timeStr;
+    
+    let hours = parseInt(match[1]);
+    const minutes = match[2] ? match[2] : '00';
+    const period = match[3].toLowerCase();
+    
+    // Convert to 24-hour format
+    if (period === 'pm' && hours !== 12) {
+        hours += 12;
+    } else if (period === 'am' && hours === 12) {
+        hours = 0;
+    }
+    
+    // Format with leading zero if needed
+    const formattedHours = hours.toString().padStart(2, '0');
+    
+    return `${formattedHours}:${minutes}`;
 }
 
 // Check if facility is currently open
