@@ -362,6 +362,9 @@ body {
     overflow: hidden;
     transition: all 0.3s ease;
     border: 1px solid var(--neutral-200);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .facility-card:hover {
@@ -396,12 +399,16 @@ body {
 
 .facility-body {
     padding: var(--spacing-6);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .facility-info {
     display: grid;
     gap: var(--spacing-4);
     margin-bottom: var(--spacing-5);
+    flex: 1;
 }
 
 .info-item {
@@ -555,7 +562,7 @@ body {
 
 /* Facility actions */
 .facility-actions {
-    margin-top: var(--spacing-5);
+    margin-top: auto;
     padding-top: var(--spacing-4);
     border-top: 1px solid var(--neutral-200);
 }
