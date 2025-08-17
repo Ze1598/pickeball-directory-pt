@@ -531,6 +531,39 @@ body {
     font-weight: 500;
 }
 
+/* Facility actions */
+.facility-actions {
+    margin-top: var(--spacing-5);
+    padding-top: var(--spacing-4);
+    border-top: 1px solid var(--neutral-200);
+}
+
+.show-on-map-btn {
+    background-color: var(--primary-green);
+    color: var(--neutral-100);
+    border: none;
+    padding: var(--spacing-3) var(--spacing-5);
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    width: 100%;
+    justify-content: center;
+}
+
+.show-on-map-btn:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-1px);
+}
+
+.show-on-map-btn:active {
+    transform: translateY(0);
+}
+
 /* Map */
 .map-container {
     height: 600px;

@@ -160,13 +160,45 @@ function switchView(view) {
         listView.classList.remove('active');
         mapView.classList.add('active');
         
-        // Invalidate map size when switching to map view
+        // Invalidate map size and fit bounds when switching to map view
         setTimeout(() => {
             if (map) {
                 map.invalidateSize();
+                // Re-fit bounds to ensure proper zoom
+                if (markers.length > 0) {
+                    const group = new L.featureGroup(markers);
+                    map.fitBounds(group.getBounds().pad(0.05), {
+                        maxZoom: 12
+                    });
+                }
             }
         }, 100);
     }
+}
+
+// Show specific facility on map
+function showOnMap(facilityName, lat, lng) {
+    // Switch to map view
+    switchView('map');
+    
+    // Wait for map to be ready, then center on the facility
+    setTimeout(() => {
+        if (map) {
+            const latitude = parseFloat(lat);
+            const longitude = parseFloat(lng);
+            
+            map.setView([latitude, longitude], 15);
+            
+            // Find and open the popup for this facility
+            markers.forEach(marker => {
+                const markerLatLng = marker.getLatLng();
+                if (Math.abs(markerLatLng.lat - latitude) < 0.0001 && 
+                    Math.abs(markerLatLng.lng - longitude) < 0.0001) {
+                    marker.openPopup();
+                }
+            });
+        }
+    }, 200);
 }
 
 // Display facilities in list view
@@ -279,6 +311,13 @@ function createFacilityCard(court) {
                 </div>
             </div>
             ` : ''}
+            
+            <div class="facility-actions">
+                <button class="show-on-map-btn" onclick="showOnMap('${escapeHtml(court['Facility Name'])}', ${court.Latitude}, ${court.Longitude})">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Ver no mapa
+                </button>
+            </div>
         </div>
     `;
     
