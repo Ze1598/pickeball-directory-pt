@@ -652,27 +652,16 @@ body {
     line-height: 1.6;
 }
 
-.social-links {
-    display: flex;
-    gap: var(--spacing-3);
-}
-
-.social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: var(--neutral-700);
-    color: var(--neutral-300);
-    border-radius: 50%;
+.footer-section a {
+    color: var(--primary-green);
     text-decoration: none;
-    transition: all 0.2s ease;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
-.social-links a:hover {
-    background-color: var(--primary-green);
-    color: var(--neutral-100);
+.footer-section a:hover {
+    color: #00994d;
+    text-decoration: underline;
 }
 
 .footer-bottom {
@@ -691,10 +680,6 @@ body {
         grid-template-columns: 1fr;
         gap: var(--spacing-6);
         text-align: center;
-    }
-    
-    .social-links {
-        justify-content: center;
     }
 }
 
