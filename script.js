@@ -250,7 +250,7 @@ function createFacilityCard(court) {
                     <div class="info-content">
                         <span class="info-label">Número de Campos</span>
                         <div class="info-text">
-                            <span class="courts-count">${court['Number of Courts']} ${parseInt(court['Number of Courts']) === 1 ? 'campo' : 'campos'}</span>
+                            ${court['Number of Courts']} ${parseInt(court['Number of Courts']) === 1 ? 'campo' : 'campos'}
                         </div>
                     </div>
                 </div>
