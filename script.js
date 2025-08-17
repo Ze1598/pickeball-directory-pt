@@ -467,12 +467,14 @@ function updateResultsCount() {
 
 // Initialize Leaflet map
 function initializeMap() {
-    map = L.map('map').setView([39.5, -8.0], 7); // Center on Portugal
+    // Initialize map without specific view - we'll fit to markers
+    map = L.map('map').setView([39.5, -8.0], 7);
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
     
+    // Add initial markers and fit view
     updateMapMarkers();
 }
 
@@ -500,7 +502,12 @@ function updateMapMarkers() {
     // Adjust map view to fit all markers
     if (markers.length > 0) {
         const group = new L.featureGroup(markers);
-        map.fitBounds(group.getBounds().pad(0.1));
+        map.fitBounds(group.getBounds().pad(0.05), {
+            maxZoom: 12 // Prevent zooming in too much for single markers
+        });
+    } else {
+        // Fallback to Portugal view if no markers
+        map.setView([39.5, -8.0], 7);
     }
 }
 
