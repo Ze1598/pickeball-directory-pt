@@ -1,0 +1,42 @@
+# Robots.txt for Pickleball Portugal Directory
+# Optimized for search engine crawling
+
+User-agent: *
+Allow: /
+
+# Allow all search engines to access the site
+Allow: /index.html
+Allow: /styles.css
+Allow: /script.js
+Allow: /data.js
+
+# Sitemap location
+Sitemap: https://pickleballportugal.pt/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Specific instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block access to sensitive files (if any exist)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow access to CSS and JS for proper rendering
+User-agent: *
+Allow: /styles.css
+Allow: /script.js
+Allow: /images/

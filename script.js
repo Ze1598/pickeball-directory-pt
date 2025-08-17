@@ -218,6 +218,69 @@ function displayFacilities(courts) {
     });
 }
 
+// Generate LocalBusiness schema for each facility
+function generateLocalBusinessSchema(court) {
+    const operatingHours = parseOperatingHours(court['Operating Hours']);
+    const services = parseAdditionalInfo(court['Additional Information']);
+    
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "SportsActivityLocation",
+        "name": court['Facility Name'],
+        "url": court.Website || null,
+        "description": `Campo de pickleball em ${court.District}, Portugal. ${court['Additional Information']}`,
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": court['Full Address'],
+            "addressLocality": court.District,
+            "addressCountry": "PT"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": court.Latitude,
+            "longitude": court.Longitude
+        },
+        "telephone": court.Phone,
+        "email": court.Email || null,
+        "sport": "Pickleball",
+        "amenityFeature": services.map(service => ({
+            "@type": "LocationFeatureSpecification",
+            "name": service,
+            "value": true
+        })),
+        "numberOfCourts": parseInt(court['Number of Courts']),
+        "priceRange": court['Additional Information'].includes('€') ? 
+            court['Additional Information'].match(/€\d+/)?.[0] : null
+    };
+    
+    if (operatingHours) {
+        schema.openingHoursSpecification = Object.entries(operatingHours).map(([day, hours]) => ({
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": day,
+            "opens": hours === 'Closed' ? null : convertTimeToHours(hours.split('-')[0]),
+            "closes": hours === 'Closed' ? null : convertTimeToHours(hours.split('-')[1])
+        })).filter(spec => spec.opens && spec.closes);
+    }
+    
+    return schema;
+}
+
+// Helper function to convert time format
+function convertTimeToHours(timeStr) {
+    if (!timeStr || timeStr.includes('24 hours') || timeStr.includes('Open 24')) return null;
+    const match = timeStr.trim().match(/(\d+)(?::(\d+))?(am|pm)/i);
+    if (!match) return null;
+    
+    let hours = parseInt(match[1]);
+    const minutes = match[2] ? match[2] : '00';
+    const period = match[3].toLowerCase();
+    
+    if (period === 'pm' && hours !== 12) hours += 12;
+    else if (period === 'am' && hours === 12) hours = 0;
+    
+    return `${hours.toString().padStart(2, '0')}:${minutes}`;
+}
+
 // Create facility card HTML
 function createFacilityCard(court) {
     const card = document.createElement('div');
@@ -226,6 +289,13 @@ function createFacilityCard(court) {
     const operatingHours = parseOperatingHours(court['Operating Hours']);
     const currentStatus = checkOperatingStatus(court);
     const services = parseAdditionalInfo(court['Additional Information']);
+    
+    // Add LocalBusiness schema to each card
+    const schema = generateLocalBusinessSchema(court);
+    const schemaScript = document.createElement('script');
+    schemaScript.type = 'application/ld+json';
+    schemaScript.textContent = JSON.stringify(schema);
+    card.appendChild(schemaScript);
     
     card.innerHTML = `
         <div class="facility-header">
