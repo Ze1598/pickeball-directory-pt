@@ -485,9 +485,9 @@ body {
 }
 
 .hour-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--spacing-3);
     padding: var(--spacing-2);
     border-radius: var(--border-radius-sm);
     font-size: var(--font-size-sm);
@@ -505,6 +505,12 @@ body {
 .day-hours {
     color: var(--neutral-600);
     font-weight: 400;
+    text-align: right;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-1);
 }
 
 .day-hours.open-now {
