@@ -8,7 +8,7 @@ const pickleballCourts = [
     "Phone": "+351 92 335 3928",
     "Website": "https://www.tiepadel.com/Nuiks",
     "Email": "geral@nuiks.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "4",
     "Operating Hours": "{\"Monday\":\"9am-12am\",\"Tuesday\":\"9am-12am\",\"Wednesday\":\"9am-12am\",\"Thursday\":\"9am-12am\",\"Friday\":\"9am-12am\",\"Saturday\":\"9am-8pm\",\"Sunday\":\"9am-8pm\"}",
     "Additional Information": "Equipment rental, Lessons, Social sessions, Sports complex",
     "District": "Porto"
@@ -21,7 +21,7 @@ const pickleballCourts = [
     "Phone": "+351 938 437 688",
     "Website": "https://www.facebook.com/bpickleball",
     "Email": "bpickleball@gmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "2",
     "Operating Hours": "{\"Monday\":\"7am-12am\",\"Tuesday\":\"7am-12am\",\"Wednesday\":\"7am-12am\",\"Thursday\":\"7am-12am\",\"Friday\":\"7am-12am\",\"Saturday\":\"8am-10pm\",\"Sunday\":\"8am-9pm\"}",
     "Additional Information": "Pro shop, Lessons, Tournaments",
     "District": "Braga"
@@ -34,7 +34,7 @@ const pickleballCourts = [
     "Phone": "+ 351 223 243 800",
     "Website": "https://www.lemonfit.pt/lemonfit-padel-maia",
     "Email": "geral.maia@lemonfit.pt",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "2",
     "Operating Hours": "{\"Monday\":\"6:30am-12am\",\"Tuesday\":\"6:30am-12am\",\"Wednesday\":\"6:30am-12am\",\"Thursday\":\"6:30am-12am\",\"Friday\":\"6:30am-12am\",\"Saturday\":\"8am-8pm\",\"Sunday\":\"8am-2pm\"}",
     "Additional Information": "Gym, Padel, Fitness classes, Sauna",
     "District": "Porto"
@@ -60,7 +60,7 @@ const pickleballCourts = [
     "Phone": "+351 253 512 579",
     "Website": "http://www.clubetenisguimaraes.com/",
     "Email": "clube.tenis.guimaraes@gmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "3",
     "Operating Hours": "{\"Monday\":\"9am-12am\",\"Tuesday\":\"9am-12am\",\"Wednesday\":\"9am-12am\",\"Thursday\":\"9am-12am\",\"Friday\":\"9am-12am\",\"Saturday\":\"9am-8pm\",\"Sunday\":\"9am-8pm\"}",
     "Additional Information": "Tennis, Padel, Clay courts, Restaurant",
     "District": "Braga"
@@ -73,7 +73,7 @@ const pickleballCourts = [
     "Phone": "",
     "Website": "https://www.facebook.com/groups/vianapickleball",
     "Email": "info@padelviana.pt",
-    "Number of Courts": "2",
+    "Number of Courts": "1",
     "Operating Hours": "{\"Monday\":\"9am-12am\",\"Tuesday\":\"9am-12am\",\"Wednesday\":\"9am-12am\",\"Thursday\":\"9am-12am\",\"Friday\":\"9am-12am\",\"Saturday\":\"9am-12am\",\"Sunday\":\"9am-8pm\"}",
     "Additional Information": "Padel, Academy, Bar",
     "District": "Viana do Castelo"
@@ -86,7 +86,7 @@ const pickleballCourts = [
     "Phone": "+351 914 075 678",
     "Website": "https://www.facebook.com/profile.php?id=61572530131416",
     "Email": "geral@ufnogueiro-tenoes.pt",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "1",
     "Operating Hours": "{\"Monday\":\"Closed\",\"Tuesday\":\"Closed\",\"Wednesday\":\"Closed\",\"Thursday\":\"2pm-7pm\",\"Friday\":\"9am-12pm\",\"Saturday\":\"2pm-7pm\",\"Sunday\":\"9am-12pm\"}",
     "Additional Information": "Community center, Lessons",
     "District": "Braga"
@@ -99,7 +99,7 @@ const pickleballCourts = [
     "Phone": "+351 916 400 368",
     "Website": "https://www.facebook.com/p/Pickleball-RC-61554012287017/",
     "Email": "Not specified",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "2",
     "Operating Hours": "{\"Monday\":\"9am-11pm\",\"Tuesday\":\"9am-11pm\",\"Wednesday\":\"9am-11pm\",\"Thursday\":\"9am-11pm\",\"Friday\":\"9am-11pm\",\"Saturday\":\"9am-8pm\",\"Sunday\":\"9am-8pm\"}",
     "Additional Information": "Racket sports",
     "District": "Porto"
@@ -125,7 +125,7 @@ const pickleballCourts = [
     "Phone": "+351 253 540 630",
     "Website": "https://www.ovs.pt/",
     "Email": "geral@ovs.pt",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "4",
     "Operating Hours": "{\"Monday\":\"7am-11pm\",\"Tuesday\":\"7am-11pm\",\"Wednesday\":\"7am-11pm\",\"Thursday\":\"7am-11pm\",\"Friday\":\"7am-11pm\",\"Saturday\":\"8am-10pm\",\"Sunday\":\"8am-8pm\"}",
     "Additional Information": "Hotel, Spa, Gym, Tennis, Football",
     "District": "Braga"
@@ -138,7 +138,7 @@ const pickleballCourts = [
     "Phone": "",
     "Website": "https://www.facebook.com/p/Associa%C3%A7%C3%A3o-Cultural-E-Desportiva-Os-Beir%C3%B5es-De-Ma%C3%A7ainhas-100080303273938/?locale=pt_PT",
     "Email": "pickleballbeiroes@gmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "3",
     "Operating Hours": "{\"Monday\":\"9am-9pm\",\"Tuesday\":\"9am-9pm\",\"Wednesday\":\"9am-9pm\",\"Thursday\":\"9am-9pm\",\"Friday\":\"9am-9pm\",\"Saturday\":\"9am-9pm\",\"Sunday\":\"9am-9pm\"}",
     "Additional Information": "Community sports, Events",
     "District": "Guarda"
@@ -151,7 +151,7 @@ const pickleballCourts = [
     "Phone": "+351 910 574 176",
     "Website": "https://linktr.ee/navepadel",
     "Email": "geral@navepadel.pt",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "8",
     "Operating Hours": "{\"Monday\":\"8am-12am\",\"Tuesday\":\"8am-12am\",\"Wednesday\":\"8am-12am\",\"Thursday\":\"8am-12am\",\"Friday\":\"8am-12am\",\"Saturday\":\"9am-9pm\",\"Sunday\":\"9am-9pm\"}",
     "Additional Information": "Padel, Indoor courts, Bar",
     "District": "Lisboa"
@@ -164,7 +164,7 @@ const pickleballCourts = [
     "Phone": "+351 961 655 279",
     "Website": "https://www.facebook.com/ARDCpickleballvau",
     "Email": "silvercoastpickleball@gmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "2",
     "Operating Hours": "{\"Monday\":\"9am-10pm\",\"Tuesday\":\"9am-10pm\",\"Wednesday\":\"9am-10pm\",\"Thursday\":\"9am-10pm\",\"Friday\":\"9am-10pm\",\"Saturday\":\"9am-10pm\",\"Sunday\":\"9am-10pm\"}",
     "Additional Information": "Community club",
     "District": "Leiria"
@@ -177,7 +177,7 @@ const pickleballCourts = [
     "Phone": "+351 964 139 083",
     "Website": "https://www.tiepadel.com/OeirasPadelAcademy",
     "Email": "geral@oeiraspadelacademy.pt",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "1",
     "Operating Hours": "{\"Monday\":\"7am-11pm\",\"Tuesday\":\"7am-11pm\",\"Wednesday\":\"7am-11pm\",\"Thursday\":\"7am-11pm\",\"Friday\":\"8am-10:30pm\",\"Saturday\":\"8am-11pm\",\"Sunday\":\"8am-11pm\"}",
     "Additional Information": "Padel, Academy, Tournaments",
     "District": "Lisboa"
@@ -203,7 +203,7 @@ const pickleballCourts = [
     "Phone": "+351 964 718 655",
     "Website": "https://www.tiepadel.com/CoolPadelEriceira",
     "Email": "coolgym.ericeira@gmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "4",
     "Operating Hours": "{\"Monday\":\"7am-10pm\",\"Tuesday\":\"7am-10pm\",\"Wednesday\":\"7am-10pm\",\"Thursday\":\"7am-10pm\",\"Friday\":\"7am-10pm\",\"Saturday\":\"8am-8pm\",\"Sunday\":\"8am-7pm\"}",
     "Additional Information": "Gym, Padel, Fitness classes",
     "District": "Lisboa"
@@ -216,7 +216,7 @@ const pickleballCourts = [
     "Phone": "+351 243 306 289",
     "Website": "http://www.ctsantarem.com/",
     "Email": "ctsantarem@gmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "1",
     "Operating Hours": "{\"Monday\":\"9am-10pm\",\"Tuesday\":\"9am-10pm\",\"Wednesday\":\"9am-10pm\",\"Thursday\":\"9am-10pm\",\"Friday\":\"9am-10pm\",\"Saturday\":\"10am-6pm\",\"Sunday\":\"10am-1pm\"}",
     "Additional Information": "Tennis, School, Events",
     "District": "Santarém"
@@ -229,7 +229,7 @@ const pickleballCourts = [
     "Phone": "+351 936 304 536",
     "Website": "https://www.clubepickleball.pt/",
     "Email": "clubepickleballleiria@gmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "8",
     "Operating Hours": "{\"Monday\":\"9am-9pm\",\"Tuesday\":\"9am-9pm\",\"Wednesday\":\"9am-9pm\",\"Thursday\":\"9am-9pm\",\"Friday\":\"9am-9pm\",\"Saturday\":\"9am-6pm\",\"Sunday\":\"Closed\"}",
     "Additional Information": "Tournaments, Lessons",
     "District": "Leiria"
@@ -242,7 +242,7 @@ const pickleballCourts = [
     "Phone": "+351 918 736 200",
     "Website": "https://www.facebook.com/pickleballcaldas/",
     "Email": "clubepickleballoeste@gmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "4",
     "Operating Hours": "{\"Monday\":\"9:30am-6pm\",\"Tuesday\":\"9:30am-6pm\",\"Wednesday\":\"9:30am-6pm\",\"Thursday\":\"9:30am-6pm\",\"Friday\":\"9:30am-6pm\",\"Saturday\":\"Closed\",\"Sunday\":\"Closed\"}",
     "Additional Information": "Indoor courts, Social play",
     "District": "Leiria"
@@ -255,7 +255,7 @@ const pickleballCourts = [
     "Phone": "+351 910 095 170",
     "Website": "https://www.facebook.com/groups/26894900743488535/",
     "Email": "PORTUGALPICKLEBALLZONE@GMAIL.COM",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "4",
     "Operating Hours": "{\"Monday\":\"Closed\",\"Tuesday\":\"Closed\",\"Wednesday\":\"Closed\",\"Thursday\":\"Closed\",\"Friday\":\"3pm-8pm\",\"Saturday\":\"9am-8pm\",\"Sunday\":\"9am-8pm\"}",
     "Additional Information": "Events, Tournaments",
     "District": "Lisboa"
@@ -294,7 +294,7 @@ const pickleballCourts = [
     "Phone": "+351 911 841 177",
     "Website": "https://www.facebook.com/groups/pickleballlisboa",
     "Email": "pickleballlisboa@gmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "1",
     "Operating Hours": "{\"Monday\":\"9am-9pm\",\"Tuesday\":\"9am-9pm\",\"Wednesday\":\"9am-9pm\",\"Thursday\":\"9am-9pm\",\"Friday\":\"9am-9pm\",\"Saturday\":\"9am-6pm\",\"Sunday\":\"9am-6pm\"}",
     "Additional Information": "Community association, Events",
     "District": "Lisboa"
@@ -307,7 +307,7 @@ const pickleballCourts = [
     "Phone": "+ 351 927 239 978",
     "Website": "https://www.matchpointeam.com/aroeiratennispadelnew",
     "Email": "matchpointeam@outlook.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "1",
     "Operating Hours": "{\"Monday\":\"8am-10:30pm\",\"Tuesday\":\"8am-10:30pm\",\"Wednesday\":\"8am-10:30pm\",\"Thursday\":\"8am-10:30pm\",\"Friday\":\"8am-10:30pm\",\"Saturday\":\"8am-10:30pm\",\"Sunday\":\"8am-10:30pm\"}",
     "Additional Information": "Tennis, Padel, Shop",
     "District": "Setúbal"
@@ -320,7 +320,7 @@ const pickleballCourts = [
     "Phone": "+ 351 218 081 934",
     "Website": "https://www.lemonfit.pt/olaias",
     "Email": "geral.olaias@lemonfit.pt",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "2",
     "Operating Hours": "{\"Monday\":\"7am-12am\",\"Tuesday\":\"7am-12am\",\"Wednesday\":\"7am-12am\",\"Thursday\":\"7am-12am\",\"Friday\":\"7am-12am\",\"Saturday\":\"8am-11pm\",\"Sunday\":\"9am-11pm\"}",
     "Additional Information": "Gym, Pool, Spa, Padel",
     "District": "Lisboa"
@@ -333,7 +333,7 @@ const pickleballCourts = [
     "Phone": "+ 351 963 381 472",
     "Website": "https://www.pickleheads.com/courts/pt/viana-do-castelo/moreira-do-lima/campo-poliesportivo-de-pinheiro-de-azere",
     "Email": "juntapinheiro@hotmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "4",
     "Operating Hours": "{\"Monday\":\"9am-5pm\",\"Tuesday\":\"9am-5pm\",\"Wednesday\":\"9am-5pm\",\"Thursday\":\"9am-5pm\",\"Friday\":\"9am-5pm\",\"Saturday\":\"Closed\",\"Sunday\":\"Closed\"}",
     "Additional Information": "Community courts",
     "District": "Viseu"
@@ -346,7 +346,7 @@ const pickleballCourts = [
     "Phone": "+351 932 518 865",
     "Website": "https://www.facebook.com/sportclubdelavos/",
     "Email": "LAVOSBASEBOL@GMAIL.COM",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "2",
     "Operating Hours": "{\"Monday\":\"9am-10pm\",\"Tuesday\":\"9am-10pm\",\"Wednesday\":\"9am-10pm\",\"Thursday\":\"9am-10pm\",\"Friday\":\"9am-10pm\",\"Saturday\":\"9am-10pm\",\"Sunday\":\"9am-10pm\"}",
     "Additional Information": "Baseball, Multisport",
     "District": "Coimbra"
@@ -372,7 +372,7 @@ const pickleballCourts = [
     "Phone": "+351 939 505 811",
     "Website": "https://www.facebook.com/profile.php?id=61560820150364",
     "Email": "pickleballclubealvor@gmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "2",
     "Operating Hours": "{\"Monday\":\"9am-9pm\",\"Tuesday\":\"9am-9pm\",\"Wednesday\":\"9am-9pm\",\"Thursday\":\"9am-9pm\",\"Friday\":\"9am-9pm\",\"Saturday\":\"9am-6pm\",\"Sunday\":\"9am-6pm\"}",
     "Additional Information": "Bowls, Social club",
     "District": "Faro"
@@ -385,7 +385,7 @@ const pickleballCourts = [
     "Phone": "+351 962 289 983",
     "Website": "https://playtimescheduler.com/region/alvor-algarve",
     "Email": "Not specified",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "4",
     "Operating Hours": "{\"Monday\":\"10am-12pm\",\"Tuesday\":\"By appointment\",\"Wednesday\":\"By appointment\",\"Thursday\":\"10am-12pm\",\"Friday\":\"By appointment\",\"Saturday\":\"By appointment\",\"Sunday\":\"By appointment\"}",
     "Additional Information": "Sports complex, Pool",
     "District": "Faro"
@@ -398,7 +398,7 @@ const pickleballCourts = [
     "Phone": "+351 965 448 247",
     "Website": "https://www.burgausportscentre.com/",
     "Email": "burgauholidays@gmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "4",
     "Operating Hours": "{\"Monday\":\"9am-6pm\",\"Tuesday\":\"9am-6pm\",\"Wednesday\":\"9am-6pm\",\"Thursday\":\"9am-6pm\",\"Friday\":\"9am-6pm\",\"Saturday\":\"9am-6pm\",\"Sunday\":\"9am-6pm\"}",
     "Additional Information": "Tennis, Pool, Squash, Apartments",
     "District": "Faro"
@@ -411,7 +411,7 @@ const pickleballCourts = [
     "Phone": "+351 917 225 220",
     "Website": "https://www.jacobinportugal.com/",
     "Email": "info@jacobinportugal.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "1",
     "Operating Hours": "{\"Monday\":\"9am-8pm\",\"Tuesday\":\"9am-8pm\",\"Wednesday\":\"9am-8pm\",\"Thursday\":\"9am-8pm\",\"Friday\":\"9am-8pm\",\"Saturday\":\"9am-8pm\",\"Sunday\":\"9am-8pm\"}",
     "Additional Information": "Accommodation, Private court",
     "District": "Faro"
@@ -424,7 +424,7 @@ const pickleballCourts = [
     "Phone": "+351 911 740 098",
     "Website": "https://rochabravarc.com/",
     "Email": "rochabrava@nordapadel.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "12",
     "Operating Hours": "{\"Monday\":\"8:30am-6pm\",\"Tuesday\":\"8:30am-6pm\",\"Wednesday\":\"8:30am-6pm\",\"Thursday\":\"8:30am-6pm\",\"Friday\":\"8:30am-6pm\",\"Saturday\":\"8:30am-4pm\",\"Sunday\":\"8:30am-4pm\"}",
     "Additional Information": "Tennis, Padel, Resort, Pool",
     "District": "Faro"
@@ -437,7 +437,7 @@ const pickleballCourts = [
     "Phone": "+351 282 358 236",
     "Website": "https://www.carvoeiroclubegroup.com/en/sports-leisure-api/item/5179-carvoeiro-clube-de-tenis-e-padel",
     "Email": "geral@tenniscarvoeiro.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "1",
     "Operating Hours": "{\"Monday\":\"8am-8pm\",\"Tuesday\":\"8am-8pm\",\"Wednesday\":\"8am-8pm\",\"Thursday\":\"8am-8pm\",\"Friday\":\"8am-8pm\",\"Saturday\":\"8am-8pm\",\"Sunday\":\"8am-8pm\"}",
     "Additional Information": "Tennis, Gym, Wellness",
     "District": "Faro"
@@ -450,7 +450,7 @@ const pickleballCourts = [
     "Phone": "+351 282 340 900",
     "Website": "https://www.pestana.com/en/hotel/pestana-gramacho-residences?utm_campaign=pestana-gramacho-residences-partoo&utm_medium=organicsearch",
     "Email": "fo.carvoeiro@pestana.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "1",
     "Operating Hours": "{\"Monday\":\"7am-10pm\",\"Tuesday\":\"7am-10pm\",\"Wednesday\":\"7am-10pm\",\"Thursday\":\"7am-10pm\",\"Friday\":\"7am-10pm\",\"Saturday\":\"7am-10pm\",\"Sunday\":\"7am-10pm\"}",
     "Additional Information": "Golf, Spa, Restaurant, Hotel",
     "District": "Faro"
@@ -463,8 +463,8 @@ const pickleballCourts = [
     "Phone": "",
     "Website": "",
     "Email": "Not specified",
-    "Number of Courts": "Not specified",
-    "Operating Hours": "{\"Monday\":\"Available\",\"Tuesday\":\"Available\",\"Wednesday\":\"Available\",\"Thursday\":\"Available\",\"Friday\":\"Available\",\"Saturday\":\"Available\",\"Sunday\":\"Available\"}",
+    "Number of Courts": "2",
+    "Operating Hours": "{\"Monday\":\"12am-12am\",\"Tuesday\":\"12am-12am\",\"Wednesday\":\"12am-12am\",\"Thursday\":\"12am-12am\",\"Friday\":\"12am-12am\",\"Saturday\":\"12am-12am\",\"Sunday\":\"12am-12am\"}",
     "Additional Information": "Public courts",
     "District": "Faro"
   },
@@ -476,7 +476,7 @@ const pickleballCourts = [
     "Phone": "+351 289 322 740",
     "Website": "https://www.brownssportsresort.com/en/",
     "Email": "info@browns-club.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "2",
     "Operating Hours": "{\"Monday\":\"8am-8pm\",\"Tuesday\":\"8am-8pm\",\"Wednesday\":\"8am-8pm\",\"Thursday\":\"8am-8pm\",\"Friday\":\"8am-8pm\",\"Saturday\":\"8am-8pm\",\"Sunday\":\"8am-8pm\"}",
     "Additional Information": "Resort, High performance center, Pool, Football",
     "District": "Faro"
@@ -489,7 +489,7 @@ const pickleballCourts = [
     "Phone": "+351 281 322 247",
     "Website": "",
     "Email": "info@quintadocaracol.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "4",
     "Operating Hours": "{\"Monday\":\"9am-6pm\",\"Tuesday\":\"9am-6pm\",\"Wednesday\":\"9am-6pm\",\"Thursday\":\"9am-6pm\",\"Friday\":\"9am-6pm\",\"Saturday\":\"9am-6pm\",\"Sunday\":\"9am-6pm\"}",
     "Additional Information": "Accommodation, Private court",
     "District": "Faro"
@@ -502,7 +502,7 @@ const pickleballCourts = [
     "Phone": "+351 289 324 123",
     "Website": "https://www.tietennis.com/vilamoura",
     "Email": "vta@premier-sports.org",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "2",
     "Operating Hours": "{\"Monday\":\"9am-9pm\",\"Tuesday\":\"9am-9pm\",\"Wednesday\":\"9am-9pm\",\"Thursday\":\"9am-9pm\",\"Friday\":\"9am-9pm\",\"Saturday\":\"9am-9pm\",\"Sunday\":\"9am-9pm\"}",
     "Additional Information": "Tennis, Padel, Pro shop, Cafe",
     "District": "Faro"
@@ -515,7 +515,7 @@ const pickleballCourts = [
     "Phone": "+351 281 541 014",
     "Website": "https://www.facebook.com/groups/3263015170631490",
     "Email": "geral@tenisvrsa.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "2",
     "Operating Hours": "{\"Monday\":\"9am-12pm, 4pm-8pm\",\"Tuesday\":\"9am-12pm, 4pm-8pm\",\"Wednesday\":\"9am-12pm, 4pm-8pm\",\"Thursday\":\"9am-12pm, 4pm-8pm\",\"Friday\":\"9am-12pm, 4pm-8pm\",\"Saturday\":\"9am-12pm, 4pm-8pm\",\"Sunday\":\"Closed\"}",
     "Additional Information": "Tennis, School",
     "District": "Faro"
@@ -528,7 +528,7 @@ const pickleballCourts = [
     "Phone": "+351 916 175 231",
     "Website": "https://www.facebook.com/profile.php?id=61553888848762",
     "Email": "lagosteniscenter@gmail.com",
-    "Number of Courts": "Not specified",
+    "Number of Courts": "8",
     "Operating Hours": "{\"Monday\":\"8:30am-6pm\",\"Tuesday\":\"8:30am-6pm\",\"Wednesday\":\"8:30am-6pm\",\"Thursday\":\"8:30am-6pm\",\"Friday\":\"8:30am-6pm\",\"Saturday\":\"8:30am-4pm\",\"Sunday\":\"8:30am-4pm\"}",
     "Additional Information": "Tennis, Training",
     "District": "Faro"
