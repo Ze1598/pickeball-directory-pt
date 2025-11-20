@@ -21,6 +21,8 @@ let resultsCount;
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
     initializeElements();
+    updateHeaderStats();
+    updateFAQStats();
     initializeFilters();
     initializeEventListeners();
     initializeMap();
@@ -43,6 +45,76 @@ function initializeElements() {
     facilitiesList = document.getElementById('facilitiesList');
     noResults = document.getElementById('noResults');
     resultsCount = document.getElementById('resultsCount');
+}
+
+// Update header statistics dynamically
+function updateHeaderStats() {
+    // Calculate total facilities
+    const totalFacilities = pickleballCourts.length;
+
+    // Calculate unique districts
+    const uniqueDistricts = new Set(pickleballCourts.map(court => court.District));
+    const totalDistricts = uniqueDistricts.size;
+
+    // Calculate total courts
+    let totalCourts = 0;
+    pickleballCourts.forEach(court => {
+        const numCourts = court["Number of Courts"];
+        if (numCourts && numCourts !== "Not specified") {
+            const parsed = parseInt(numCourts);
+            if (!isNaN(parsed)) {
+                totalCourts += parsed;
+            }
+        }
+    });
+
+    // Update DOM
+    document.getElementById('totalFacilities').textContent = totalFacilities;
+    document.getElementById('totalDistricts').textContent = totalDistricts;
+    document.getElementById('totalCourts').textContent = totalCourts > 0 ? totalCourts + '+' : 'N/A';
+}
+
+// Update FAQ statistics dynamically
+function updateFAQStats() {
+    // Calculate total facilities
+    const totalFacilities = pickleballCourts.length;
+
+    // Calculate unique districts
+    const uniqueDistricts = [...new Set(pickleballCourts.map(court => court.District))].sort();
+    const totalDistricts = uniqueDistricts.size;
+
+    // Calculate total courts
+    let totalCourts = 0;
+    pickleballCourts.forEach(court => {
+        const numCourts = court["Number of Courts"];
+        if (numCourts && numCourts !== "Not specified") {
+            const parsed = parseInt(numCourts);
+            if (!isNaN(parsed)) {
+                totalCourts += parsed;
+            }
+        }
+    });
+
+    // Update FAQ DOM elements
+    const faqTotalCourtsEl = document.getElementById('faqTotalCourts');
+    const faqTotalFacilitiesEl = document.getElementById('faqTotalFacilities');
+    const faqTotalDistrictsEl = document.getElementById('faqTotalDistricts');
+    const faqDistrictsListEl = document.getElementById('faqDistrictsList');
+
+    if (faqTotalCourtsEl) {
+        faqTotalCourtsEl.textContent = totalCourts > 0 ? `over ${totalCourts} pickleball courts` : 'multiple pickleball courts';
+    }
+    if (faqTotalFacilitiesEl) {
+        faqTotalFacilitiesEl.textContent = `${totalFacilities} facilities`;
+    }
+    if (faqTotalDistrictsEl) {
+        faqTotalDistrictsEl.textContent = totalDistricts;
+    }
+    if (faqDistrictsListEl) {
+        // Show top districts (limit to avoid too long text)
+        const topDistricts = uniqueDistricts.slice(0, 7);
+        faqDistrictsListEl.textContent = topDistricts.join(', ');
+    }
 }
 
 // Initialize filters with unique values from data
@@ -228,7 +300,7 @@ function generateLocalBusinessSchema(court) {
         "@type": "SportsActivityLocation",
         "name": court['Facility Name'],
         "url": court.Website || null,
-        "description": `Campo de pickleball em ${court.District}, Portugal. ${court['Additional Information']}`,
+        "description": `Pickleball court in ${court.District}, Portugal. ${court['Additional Information']}`,
         "address": {
             "@type": "PostalAddress",
             "streetAddress": court['Full Address'],
@@ -308,7 +380,7 @@ function createFacilityCard(court) {
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt info-icon"></i>
                     <div class="info-content">
-                        <span class="info-label">Morada</span>
+                        <span class="info-label">Address</span>
                         <div class="info-text">${escapeHtml(court['Full Address'])}</div>
                     </div>
                 </div>
@@ -316,7 +388,7 @@ function createFacilityCard(court) {
                 <div class="info-item">
                     <i class="fas fa-phone info-icon"></i>
                     <div class="info-content">
-                        <span class="info-label">Telefone</span>
+                        <span class="info-label">Phone</span>
                         <div class="info-text">
                             <a href="tel:${court.Phone}">${escapeHtml(court.Phone)}</a>
                         </div>
@@ -341,7 +413,7 @@ function createFacilityCard(court) {
                     <div class="info-content">
                         <span class="info-label">Website</span>
                         <div class="info-text">
-                            <a href="${court.Website}" target="_blank" rel="noopener noreferrer">Visitar website</a>
+                            <a href="${court.Website}" target="_blank" rel="noopener noreferrer">Visit website</a>
                         </div>
                     </div>
                 </div>
@@ -350,9 +422,9 @@ function createFacilityCard(court) {
                 <div class="info-item">
                     <i class="fas fa-layer-group info-icon"></i>
                     <div class="info-content">
-                        <span class="info-label">Número de Campos</span>
+                        <span class="info-label">Number of Courts</span>
                         <div class="info-text">
-                            ${court['Number of Courts']} ${parseInt(court['Number of Courts']) === 1 ? 'campo' : 'campos'}
+                            ${court['Number of Courts']} ${parseInt(court['Number of Courts']) === 1 ? 'court' : 'courts'}
                         </div>
                     </div>
                 </div>
@@ -362,9 +434,9 @@ function createFacilityCard(court) {
             <div class="operating-hours">
                 <h4 class="hours-title">
                     <i class="fas fa-clock"></i>
-                    Horário de Funcionamento
+                    Operating Hours
                     <span class="status-indicator ${currentStatus === 'open' ? 'status-open' : 'status-closed'}">
-                        ${currentStatus === 'open' ? 'Aberto' : 'Fechado'}
+                        ${currentStatus === 'open' ? 'Open' : 'Closed'}
                     </span>
                 </h4>
                 <div class="hours-list">
@@ -375,7 +447,7 @@ function createFacilityCard(court) {
             
             ${services.length > 0 ? `
             <div class="additional-info">
-                <span class="info-label">Serviços Adicionais</span>
+                <span class="info-label">Additional Services</span>
                 <div class="services-list">
                     ${services.map(service => `<span class="service-tag">${escapeHtml(service)}</span>`).join('')}
                 </div>
@@ -385,7 +457,7 @@ function createFacilityCard(court) {
             <div class="facility-actions">
                 <button class="show-on-map-btn" onclick="showOnMap('${escapeHtml(court['Facility Name'])}', ${court.Latitude}, ${court.Longitude})">
                     <i class="fas fa-map-marker-alt"></i>
-                    Ver no mapa
+                    View on map
                 </button>
             </div>
         </div>
@@ -410,26 +482,26 @@ function parseOperatingHours(hoursString) {
 function formatOperatingHours(hours, currentStatus) {
     const daysOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     const dayNames = {
-        'Monday': 'Segunda-feira',
-        'Tuesday': 'Terça-feira',
-        'Wednesday': 'Quarta-feira',
-        'Thursday': 'Quinta-feira',
-        'Friday': 'Sexta-feira',
-        'Saturday': 'Sábado',
-        'Sunday': 'Domingo'
+        'Monday': 'Monday',
+        'Tuesday': 'Tuesday',
+        'Wednesday': 'Wednesday',
+        'Thursday': 'Thursday',
+        'Friday': 'Friday',
+        'Saturday': 'Saturday',
+        'Sunday': 'Sunday'
     };
     
     const today = new Date().getDay();
     const todayName = daysOrder[today === 0 ? 6 : today - 1]; // Convert Sunday=0 to Sunday=6
     
     return daysOrder.map(day => {
-        const dayHours = hours[day] || 'Fechado';
+        const dayHours = hours[day] || 'Closed';
         const isToday = day === todayName;
-        const isClosed = dayHours === 'Closed' || dayHours === 'Fechado';
+        const isClosed = dayHours === 'Closed';
         
         return `
             <div class="hour-item">
-                <span class="day-name">${dayNames[day]}${isToday ? ' (hoje)' : ''}</span>
+                <span class="day-name">${dayNames[day]}${isToday ? ' (today)' : ''}</span>
                 <span class="day-hours ${isToday && currentStatus === 'open' ? 'open-now' : ''} ${isClosed ? 'closed' : ''}">
                     ${formatHours(dayHours)}
                 </span>
@@ -440,12 +512,12 @@ function formatOperatingHours(hours, currentStatus) {
 
 // Format individual hours
 function formatHours(hours) {
-    if (hours === 'Closed' || hours === 'Fechado') {
-        return 'Fechado';
+    if (hours === 'Closed') {
+        return 'Closed';
     }
     
     if (hours === 'Open 24 hours' || hours === '12am-12am') {
-        return '24 horas';
+        return '24 hours';
     }
     
     // Convert AM/PM format to 24-hour format
@@ -454,7 +526,7 @@ function formatHours(hours) {
 
 // Convert AM/PM time format to 24-hour format
 function convertTo24HourFormat(timeString) {
-    if (!timeString || timeString === 'Closed' || timeString === 'Fechado') {
+    if (!timeString || timeString === 'Closed') {
         return timeString;
     }
     
@@ -512,7 +584,7 @@ function checkOperatingStatus(court) {
     const todayName = daysOrder[today];
     const todayHours = hours[todayName];
     
-    if (!todayHours || todayHours === 'Closed' || todayHours === 'Fechado') {
+    if (!todayHours || todayHours === 'Closed') {
         return 'closed';
     }
     
@@ -642,13 +714,13 @@ function createMapPopupContent(court) {
                 
                 <div class="popup-info-item">
                     <i class="fas fa-layer-group popup-icon"></i>
-                    <span>${court['Number of Courts']} ${parseInt(court['Number of Courts']) === 1 ? 'campo' : 'campos'}</span>
+                    <span>${court['Number of Courts']} ${parseInt(court['Number of Courts']) === 1 ? 'court' : 'courts'}</span>
                 </div>
                 
                 <div class="popup-info-item">
                     <i class="fas fa-clock popup-icon"></i>
                     <span class="${status === 'open' ? 'status-open' : 'status-closed'}">
-                        ${status === 'open' ? 'Aberto agora' : 'Fechado agora'}
+                        ${status === 'open' ? 'Open now' : 'Closed now'}
                     </span>
                 </div>
                 
