@@ -248,11 +248,11 @@
             <!-- View Toggle -->
             <section class="view-toggle">
                 <div class="toggle-buttons">
-                    <button id="listViewBtn" class="toggle-btn active">
+                    <button id="listViewBtn" class="toggle-btn">
                         <i class="fas fa-list"></i>
                         List
                     </button>
-                    <button id="mapViewBtn" class="toggle-btn">
+                    <button id="mapViewBtn" class="toggle-btn active">
                         <i class="fas fa-map"></i>
                         Map
                     </button>
@@ -266,7 +266,7 @@
             <section class="content-views" aria-labelledby="results-heading">
                 <h2 id="results-heading" class="visually-hidden">Search Results</h2>
                 <!-- List View -->
-                <div id="listView" class="view-content active" role="region" aria-label="Pickleball courts list">
+                <div id="listView" class="view-content" role="region" aria-label="Pickleball courts list">
                     <div id="facilitiesList" class="facilities-grid">
                         <!-- Facilities will be loaded here -->
                     </div>
@@ -279,7 +279,7 @@
                 </div>
 
                 <!-- Map View -->
-                <div id="mapView" class="view-content" role="region" aria-label="Pickleball courts map">
+                <div id="mapView" class="view-content active" role="region" aria-label="Pickleball courts map">
                     <div id="map" class="map-container"></div>
                 </div>
             </section>
