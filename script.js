@@ -607,8 +607,18 @@ function checkOperatingStatus(court) {
         const endMinutes = parseTime(end);
 
         if (startMinutes !== null && endMinutes !== null) {
-            if (currentTime >= startMinutes && currentTime <= endMinutes) {
-                return 'open';
+            // Handle midnight crossing (e.g., 9am-12am means open until midnight)
+            // If end time is midnight (0) or earlier than start time, it means closing time is next day
+            if (endMinutes === 0 || endMinutes < startMinutes) {
+                // Check if current time is after start OR before end (wraps to next day)
+                if (currentTime >= startMinutes || currentTime <= endMinutes) {
+                    return 'open';
+                }
+            } else {
+                // Normal case: start and end are on the same day
+                if (currentTime >= startMinutes && currentTime <= endMinutes) {
+                    return 'open';
+                }
             }
         }
     }
